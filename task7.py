@@ -18,4 +18,13 @@ def add_email():
         add_email()
     else:
         print("OK, Thank You")
+def print_mails (f_name):
+    mails=[]
+    with open(f_name,"r") as file:
+       mails=file.readlines()
+    return mails
 add_email()
+valid_emails=print_mails("add_emails.txt")
+print("The emails you have enterd are:")
+for mail in valid_emails:
+    print("->",mail)
